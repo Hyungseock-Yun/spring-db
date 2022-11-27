@@ -41,8 +41,7 @@ public class MemberRepositoryV3 {
       log.error("db error", e);
       throw e;
     } finally {
-      pstmt.close();
-      con.close();
+      close(con, pstmt, null);
     }
   }
 
@@ -95,8 +94,7 @@ public class MemberRepositoryV3 {
       log.error("db error", e);
       throw e;
     } finally {
-      pstmt.close();
-      con.close();
+      close(con, pstmt, null);
     }
   }
 
@@ -115,8 +113,7 @@ public class MemberRepositoryV3 {
       log.error("db error", e);
       throw e;
     } finally {
-      pstmt.close();
-      con.close();
+      close(con, pstmt, null);
     }
   }
 
